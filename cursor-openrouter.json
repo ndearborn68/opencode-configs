@@ -1,0 +1,31 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/cursor",
+  "docs": "https://openrouter.ai/docs/cookbook/coding-agents/cursor-integration",
+  "attribution": {
+    "HTTP-Referer": "https://cursor.com",
+    "X-OpenRouter-Title": "Cursor"
+  },
+  "default_model": "z-ai/glm-5.3",
+  "small_model": "z-ai/glm-5.3-flash",
+  "models": [
+    "z-ai/glm-5.3",
+    "z-ai/glm-5.3-flash",
+    "deepseek/deepseek-v4-pro-0813",
+    "deepseek/deepseek-v4-flash-0731",
+    "moonshotai/kimi-k2.7-code",
+    "poolside/laguna-s-2.1",
+    "qwen/qwen3.8-max-0902",
+    "google/gemini-3.1-pro-preview",
+    "google/gemini-3.8-flash",
+    "minimax/minimax-m3",
+    "meituan/longcat-2.0",
+    "nousresearch/hermes-4-405b"
+  ],
+  "notes": [
+    "Base URL must be https://openrouter.ai/api/v1/cursor (not /api/v1). The dedicated path normalizes Cursor's flat tool format.",
+    "Paste an OpenRouter key (sk-or-...) into Cursor Settings → Models → OpenAI API Key. Do not put the key in settings.json.",
+    "Add each model id exactly as listed. Router aliases need a ~ prefix (e.g. ~moonshotai/kimi-latest); our pins do not.",
+    "Tab completions always use Cursor-native models. Composer / Auto may ignore BYOK — pick a listed OpenRouter id in the model picker.",
+    "Do not leave the OpenAI override on while using Composer; Cursor returns 'This model does not support custom API keys'."
+  ]
+}
